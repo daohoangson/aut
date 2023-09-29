@@ -1,10 +1,6 @@
-// @ts-check
+import type { VercelRequest, VercelResponse } from "@vercel/node";
 
-/**
- * @param {import("@vercel/node").VercelRequest} req
- * @param {import("@vercel/node").VercelResponse} res
- */
-export default function (req, res) {
+export default function (req: VercelRequest, res: VercelResponse) {
   const number = req.query["number"] ?? "123456";
   res
     .setHeader("Content-Type", "text/html")

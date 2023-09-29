@@ -2,10 +2,15 @@
   "name": "aut",
   "version": "1.0.0",
   "scripts": {
-    "deploy": "vercel"
+    "deploy": "vercel",
+    "predeploy": "npm run format && npm run lint",
+    "format": "prettier --write '**/*.{json,ts}'",
+    "lint": "tsc --noEmit"
   },
   "devDependencies": {
     "@vercel/node": "^3.0.6",
+    "prettier": "^3.0.3",
+    "typescript": "^5.2.2",
     "vercel": "^32.3.1"
   }
 }
