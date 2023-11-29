@@ -3,7 +3,12 @@ import type { VercelRequest, VercelResponse } from "@vercel/node";
 export default function (req: VercelRequest, res: VercelResponse) {
   res
     .setHeader("Content-Type", "text/html")
-    .send(`<p>
+    .send(`
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+</head>
+<body>
+  <p>
     Blah blah blah.
     Blah blah blah.
     Blah blah blah.
@@ -28,5 +33,6 @@ export default function (req: VercelRequest, res: VercelResponse) {
     Blah blah blah.
     Blah blah blah.
   </p>
+</body>
   `);
 }
